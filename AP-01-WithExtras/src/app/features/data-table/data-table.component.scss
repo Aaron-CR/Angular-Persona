@@ -1,0 +1,96 @@
+/* SEARCH BAR */
+.app-search {
+  display: flex;
+  flex-grow: 1;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 6px 25px;
+  margin: 16px 0;
+
+  input {
+    border: none;
+    width: 100%;
+  }
+}
+
+/* TABLE */
+.mat-table {
+  min-height: 449px;
+}
+
+.mat-row:hover {
+  background: #f5f5f5;
+}
+
+.mat-paginator {
+  border-top: 1px solid #0000001f;
+}
+
+.add-button {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  z-index: 99;
+}
+
+/* RESPONSIVE TABLE */
+// De forma predeterminada, la etiqueta móvil no debería mostrarse
+.mobile-label {
+  display: none;
+}
+
+// Media Query para Web
+@media (min-width: 576px) {
+  // El botón para el menú de acciones se debe mostrar centrados con un ancho máximo de 90px
+  .mat-column-actions {
+    flex: 0 0 90px !important;
+    justify-content: center;
+  }
+}
+
+// Media Query para Móvil
+@media (max-width: 575px) {
+  // Etiqueta de encabezado personalizada que se muestra en cada columna, con un ancho establecido y fuente en negrita
+  .mobile-label {
+    width: 80px;
+    display: inline-block;
+    font-weight: bold;
+    color: #000000b0;
+  }
+
+  // Elimina la fila del encabezado por completo
+  .mat-header-row {
+    display: none;
+  }
+
+  // Las celdas de la fila deben mostrarse como una columna, justificada a la izquierda, con un poco de relleno adicional
+  .mat-row {
+    flex-direction: column;
+    align-items: start;
+    padding: 8px 48px 8px 24px;
+    min-height: unset;
+    position: relative;
+  }
+
+  // Ajustes para Angular Material 10
+  .mat-cell:first-of-type,
+  .mat-footer-cell:first-of-type,
+  .mar-header-cel:first-of-type {
+    padding-left: unset;
+  }
+
+  .mat-cell {
+    align-items: unset;
+    min-height: unset;
+  }
+
+  // El botón para el menú de acciones se debe mostrar en posición absoluta arriba a la derecha, ajustando su padding y margin
+  .mat-column-actions {
+    position: absolute;
+    width: auto;
+    top: 0;
+    right: 0;
+    padding: 8px 8px 0 0 !important;
+    margin: 0;
+  }
+}

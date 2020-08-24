@@ -1,0 +1,39 @@
+/* SEARCH BAR */
+.app-search {
+  display: flex;
+  flex-grow: 1;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 6px 25px;
+  margin: 16px 0;
+
+  input {
+    border: none;
+    width: 100%;
+  }
+}
+
+/* TABLE */
+.mat-table {
+  min-height: 449px;
+}
+
+.mat-row:hover {
+  background: #f5f5f5;
+}
+
+.mat-paginator {
+  border-top: 1px solid #0000001f;
+}
+
+.mat-column-actions {
+  flex: 0 0 90px !important;
+  justify-content: center;
+}
+
+.add-button {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  z-index: 99;
+}
